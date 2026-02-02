@@ -67,7 +67,7 @@ This feature is commonly used in real-world authentication forms across modern w
 
 ---
 ```bash
-git clone https://github.com/your-username/password-toggle.git
+git clone https://github.com/Durgaprasad4289/React-Projects.git
 cd password-toggle
 npm install
 npm start

@@ -69,7 +69,7 @@ background-color-changer/
 
 ---
 ```bash
-git clone https://github.com/your-username/background-color-changer.git
+git clone https://github.com/Durgaprasad4289/React-Projects.git
 cd background-color-changer
 npm install
 npm start

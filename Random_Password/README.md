@@ -30,7 +30,8 @@ This application allows users to generate strong, customizable passwords based o
 ---
 
 ## 📸 Preview :
-<img width="637" height="530" alt="Image" src="https://github.com/user-attachments/assets/e8c6926e-b25f-49b4-9154-67cdd1ac8714" />
+<img width="315" height="250" alt="Image" src="https://github.com/user-attachments/assets/e8c6926e-b25f-49b4-9154-67cdd1ac8714" />
+
 
 
 ---
