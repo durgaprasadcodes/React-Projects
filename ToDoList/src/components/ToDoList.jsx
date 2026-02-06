@@ -1,4 +1,4 @@
-import './toDoList.css'
+import './ToDoList.css'
 import { useState} from 'react'
 
 export default function List(){
@@ -28,11 +28,11 @@ export default function List(){
             <h1>To-Do List</h1>
             <input type="text"
                     value={newtask}
-                    placeholder='Enter Your Task...'
+                    placeholder='Add Your Task....'
                     onChange={(e)=>Setnewtask(e.target.value)} />
             <button onClick={addTask}>Add Task</button>
             <div className="total-tasks">
-                {showTasks()}
+                {tasks.length?showTasks():<b> "You have No More Tasks To Preform Toady !!!" </b> }
             </div>
         </div>
     )
