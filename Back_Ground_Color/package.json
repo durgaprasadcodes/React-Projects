@@ -1,9 +1,5 @@
 {
-<<<<<<<< HEAD:Back_Ground_Color/package.json
   "name": "back-ground-color",
-========
-  "name": "password-toggle",
->>>>>>>> 11377ac67eb5c8921617f8164b29c09f4b3edfe4:Password_Toggle/package.json
   "private": true,
   "version": "0.0.0",
   "type": "module",
