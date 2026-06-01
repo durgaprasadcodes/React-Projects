@@ -1,0 +1,115 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  min-height: 100vh;
+  background: #2e2f30;
+}
+
+.app {
+  max-width: 900px;
+  margin: 40px auto;
+  padding: 20px;
+  font-family: "Segoe UI", sans-serif;
+}
+
+header {
+  text-align: center;
+  padding: 30px;
+  background: #f5f7ff;
+  border-radius: 12px;
+  margin-bottom: 25px;
+}
+
+header h1 {
+  margin: 0;
+  font-size: 2.5rem;
+  color: #4f46e5;
+}
+
+header p {
+  margin-top: 10px;
+  color: #555;
+  font-size: 1.1rem;
+}
+
+.tabs {
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+  margin-bottom: 25px;
+}
+
+.tabs button {
+  padding: 10px 20px;
+  border: none;
+  border-radius: 8px;
+  background-color: #e5e7eb;
+  color: #333;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: 0.3s;
+}
+
+.tabs button:hover {
+  background-color: #d1d5db;
+}
+
+.tabs button.active {
+  background-color: #4f46e5;
+  color: white;
+}
+
+.component,
+.component2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 30px;
+  border-radius: 12px;
+}
+
+.component,
+.component2 {
+  background: #4f46e5;
+}
+
+.component button {
+  background: #0832d8;
+  padding: 20px;
+  border-radius: 12px;
+  margin-bottom: 20px;
+  outline: none;
+  border: none;
+  color: white;
+  font-size: 1.2rem;
+  cursor: pointer;
+  transition: 0.3s;
+  font-weight: bold;
+}
+
+.component button:hover {
+  background: #0621a8;
+}
+
+.component2 input {
+  width: 50%;
+  height: 40px;
+  padding: 15px;
+  font-size: 1.2rem;
+  border-radius: 8px;
+  border: none;
+  outline: none;
+  margin-bottom: 20px;
+}
+
+.component2 h2 {
+  font-size: 1.5rem;
+  color: #fff;
+}
