@@ -3,7 +3,7 @@ import './App.css'
 import { ToastContainer, toast } from 'react-toastify'
 
 function App() {
-
+  console.log("Checking Re-rendered - only happens when input1 changes or sum2 changes or sum1 changes but not when countref changes");
   const countref = useRef(0);
   const [input1, setInput1] = useState("")
   const [sum1, setsum1] = useState(0)
