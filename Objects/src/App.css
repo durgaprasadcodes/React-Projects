@@ -1,0 +1,470 @@
+/* ==========================================================================
+   Premium Glassmorphic Theme Design - App.css
+   ========================================================================== */
+
+/* Background floating glow effect utilizing container pseudo-elements */
+.container::before {
+  content: '';
+  position: absolute;
+  top: -15%;
+  left: -15%;
+  width: 45%;
+  height: 45%;
+  background: radial-gradient(circle, rgba(139, 92, 246, 0.22) 0%, transparent 75%);
+  filter: blur(90px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+.container::after {
+  content: '';
+  position: absolute;
+  bottom: -15%;
+  right: -15%;
+  width: 50%;
+  height: 50%;
+  background: radial-gradient(circle, rgba(217, 70, 239, 0.18) 0%, transparent 75%);
+  filter: blur(100px);
+  z-index: -1;
+  pointer-events: none;
+}
+
+/* ==========================================================================
+   Container Card
+   ========================================================================== */
+.container {
+  position: relative;
+  width: 100%;
+  background: rgba(13, 13, 23, 0.55);
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  border-radius: 24px;
+  padding: 2.5rem 2rem;
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  box-shadow: 
+    0 30px 60px -15px rgba(0, 0, 0, 0.75),
+    0 0 50px -10px rgba(139, 92, 246, 0.15),
+    inset 0 1px 1px rgba(255, 255, 255, 0.1);
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.container:hover {
+  border-color: rgba(255, 255, 255, 0.12);
+  box-shadow: 
+    0 30px 60px -15px rgba(0, 0, 0, 0.8),
+    0 0 60px -5px rgba(139, 92, 246, 0.2),
+    inset 0 1px 1px rgba(255, 255, 255, 0.15);
+}
+
+/* Heading Styling */
+.container h1 {
+  text-align: center;
+  font-family: var(--font-heading);
+  font-size: 2.5rem;
+  font-weight: 800;
+  letter-spacing: -0.03em;
+  margin-bottom: 2rem;
+  background: linear-gradient(135deg, #ffffff 10%, #c084fc 60%, #e879f9 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  color: transparent;
+  text-shadow: 0 4px 20px rgba(139, 92, 246, 0.15);
+  animation: titleGlow 4s ease-in-out infinite alternate;
+}
+
+@keyframes titleGlow {
+  0% {
+    filter: drop-shadow(0 0 8px rgba(139, 92, 246, 0.15));
+  }
+  100% {
+    filter: drop-shadow(0 0 16px rgba(217, 70, 239, 0.3));
+  }
+}
+
+/* ==========================================================================
+   Input Field Group
+   ========================================================================== */
+.input-field {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 2rem;
+}
+
+.input-field input {
+  flex: 1;
+  padding: 16px 20px;
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  background: rgba(10, 10, 18, 0.4);
+  color: #ffffff;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+.input-field input::placeholder {
+  color: var(--text-muted);
+}
+
+.input-field input:focus {
+  border-color: rgba(139, 92, 246, 0.6);
+  background: rgba(10, 10, 18, 0.65);
+  box-shadow: 
+    0 0 0 4px rgba(139, 92, 246, 0.15),
+    inset 0 2px 4px rgba(0, 0, 0, 0.25);
+}
+
+.input-field button {
+  padding: 0 28px;
+  border: none;
+  border-radius: 16px;
+  background: linear-gradient(
+    135deg,
+    var(--accent-primary) 0%,
+    var(--accent-secondary) 100%
+  );
+  color: white;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.02em;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(139, 92, 246, 0.3);
+  position: relative;
+  overflow: hidden;
+}
+
+.input-field button::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    90deg,
+    transparent,
+    rgba(255, 255, 255, 0.2),
+    transparent
+  );
+  transition: left 0.6s ease;
+}
+
+.input-field button:hover::before {
+  left: 100%;
+}
+
+.input-field button:hover {
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 24px rgba(139, 92, 246, 0.45),
+    0 0 25px rgba(217, 70, 239, 0.25);
+}
+
+.input-field button:active {
+  transform: translateY(1px);
+}
+
+/* ==========================================================================
+   Completed Tasks Panel
+   ========================================================================== */
+.tasksComplted {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 2rem;
+  padding: 14px 20px;
+  border-radius: 16px;
+  background: rgba(16, 185, 129, 0.05);
+  border: 1px solid rgba(16, 185, 129, 0.15);
+  color: #10b981;
+  font-weight: 700;
+  font-size: 1.1rem;
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.05);
+}
+
+.tasksComplted::before {
+  content: 'Completed Task Count';
+  font-size: 0.88rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+}
+
+/* ==========================================================================
+   Task List Layout
+   ========================================================================== */
+.tasks {
+  display: flex;
+  flex-direction: column;
+  gap: 1.1rem;
+}
+
+.task {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  padding: 18px 22px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.02);
+  border: 1px solid rgba(255, 255, 255, 0.05);
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.task:hover {
+  background: rgba(255, 255, 255, 0.04);
+  border-color: rgba(139, 92, 246, 0.35);
+  transform: translateY(-2px);
+  box-shadow: 
+    0 8px 24px rgba(0, 0, 0, 0.2),
+    0 0 20px rgba(139, 92, 246, 0.06);
+}
+
+/* Custom Styled Checkbox Input */
+.task input[type="checkbox"] {
+  appearance: none;
+  -webkit-appearance: none;
+  width: 22px;
+  height: 22px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 7px;
+  background: rgba(10, 10, 18, 0.4);
+  cursor: pointer;
+  position: relative;
+  outline: none;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  flex-shrink: 0;
+  order: 1;
+}
+
+.task input[type="checkbox"]:hover {
+  border-color: var(--accent-primary);
+  box-shadow: 0 0 10px rgba(139, 92, 246, 0.35);
+}
+
+.task input[type="checkbox"]:checked {
+  border-color: var(--success);
+  background: rgba(16, 185, 129, 0.12);
+}
+
+/* Checkmark drawing animation */
+.task input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  top: 3px;
+  left: 7px;
+  width: 5px;
+  height: 10px;
+  border: solid var(--success);
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+  animation: checkmarkScale 0.25s cubic-bezier(0.4, 0, 0.2, 1) forwards;
+}
+
+@keyframes checkmarkScale {
+  from {
+    opacity: 0;
+    transform: rotate(45deg) scale(0.4);
+  }
+  to {
+    opacity: 1;
+    transform: rotate(45deg) scale(1);
+  }
+}
+
+/* Task Title Text */
+.task h3 {
+  flex: 1;
+  font-size: 1.08rem;
+  font-weight: 600;
+  color: var(--text-primary);
+  word-break: break-word;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  order: 2;
+}
+
+/* Task Sub-Label Status */
+.task label {
+  color: var(--text-muted);
+  font-size: 0.8rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  order: 3;
+  flex-shrink: 0;
+}
+
+/* Interactive completed states triggered by checkbox check */
+.task input[type="checkbox"]:checked ~ h3 {
+  color: var(--text-muted);
+  text-decoration: line-through;
+  text-decoration-color: rgba(16, 185, 129, 0.5);
+  opacity: 0.7;
+}
+
+.task input[type="checkbox"]:checked ~ label {
+  color: var(--success);
+  opacity: 0.9;
+}
+
+/* Task Delete Action Button */
+.task button {
+  background: rgba(239, 68, 68, 0.08);
+  color: #ef4444;
+  border: 1px solid rgba(239, 68, 68, 0.18);
+  border-radius: 12px;
+  padding: 10px 18px;
+  font-size: 0.85rem;
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  order: 4;
+  flex-shrink: 0;
+}
+
+.task button:hover {
+  background: #ef4444;
+  color: white;
+  border-color: #ef4444;
+  box-shadow: 0 4px 15px rgba(239, 68, 68, 0.35);
+  transform: translateY(-1.5px);
+}
+
+.task button:active {
+  transform: translateY(0.5px);
+}
+
+/* ==========================================================================
+   Remove All Tasks Panel Button
+   ========================================================================== */
+.removeTasks {
+  margin-top: 1.5rem;
+  width: 100%;
+  padding: 16px;
+  border: 1px solid rgba(239, 68, 68, 0.2);
+  border-radius: 16px;
+  background: rgba(239, 68, 68, 0.04);
+  color: #ef4444;
+  font-weight: 700;
+  font-size: 0.95rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  cursor: pointer;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: inset 0 1px 0 rgba(255, 255, 255, 0.02);
+}
+
+.removeTasks:hover {
+  background: #ef4444;
+  color: white;
+  border-color: #ef4444;
+  box-shadow: 
+    0 10px 25px rgba(239, 68, 68, 0.25),
+    0 0 15px rgba(239, 68, 68, 0.15);
+  transform: translateY(-2px);
+}
+
+.removeTasks:active {
+  transform: translateY(1px);
+}
+
+/* ==========================================================================
+   Empty State Container Card
+   ========================================================================== */
+.container > h3 {
+  text-align: center;
+  color: var(--text-muted);
+  font-family: var(--font-sans);
+  font-size: 1.1rem;
+  font-weight: 500;
+  padding: 3.5rem 1.5rem;
+  background: rgba(255, 255, 255, 0.015);
+  border: 1px dashed rgba(255, 255, 255, 0.08);
+  border-radius: 18px;
+  margin-top: 1rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+}
+
+.container > h3::before {
+  content: '📝';
+  font-size: 2.25rem;
+  margin-bottom: 8px;
+  filter: drop-shadow(0 0 10px rgba(139, 92, 246, 0.4));
+  animation: emptyPulse 2.5s infinite ease-in-out;
+}
+
+@keyframes emptyPulse {
+  0%, 100% {
+    transform: scale(1);
+    opacity: 0.75;
+  }
+  50% {
+    transform: scale(1.15);
+    opacity: 1;
+    filter: drop-shadow(0 0 15px rgba(217, 70, 239, 0.5));
+  }
+}
+
+/* ==========================================================================
+   Responsive Adaptations
+   ========================================================================== */
+@media (max-width: 600px) {
+  .container {
+    padding: 1.75rem 1.25rem;
+    border-radius: 20px;
+  }
+
+  .container h1 {
+    font-size: 2rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .input-field {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .input-field button {
+    width: 100%;
+    padding: 16px;
+  }
+
+  .task {
+    flex-wrap: wrap;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .task h3 {
+    width: calc(100% - 38px);
+    font-size: 1rem;
+    order: 2;
+  }
+
+  .task label {
+    order: 3;
+    margin-left: 38px;
+  }
+
+  .task input[type="checkbox"] {
+    order: 1;
+  }
+
+  .task button {
+    order: 4;
+    width: 100%;
+    margin-top: 4px;
+    padding: 12px;
+  }
+}
