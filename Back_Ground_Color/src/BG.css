@@ -1,0 +1,67 @@
+
+
+* {
+  box-sizing: border-box;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  background: #b6b6b6;
+  display: flex;
+  color: black;
+  justify-content: center;
+  align-items: center;
+}
+
+#root{
+  margin-top: auto;
+  margin-bottom: 50px;
+  text-align: center;
+  flex-wrap: wrap;
+  padding: 30px;
+  background: white;
+  border-radius: 50px;
+}
+
+button{
+  width: 100px;
+  height: 50px;
+  border-radius: 5px;
+  font-size: 18px;
+  font-weight: bold;
+  color: #fff;
+  margin-right: 10px;
+  cursor: pointer;
+  border: #041755;
+  transition: all .2s ease;
+}
+
+button:active{
+  transform: scale(.9);
+}
+#blue{
+  background: linear-gradient(135deg,#0b62f8,#041755);
+}
+#black{
+  background: linear-gradient(135deg,#090909,#7d7f7d);
+}
+#red{
+  background: linear-gradient(135deg,#f02a07,#501b0a);
+}
+#violet{
+  background: linear-gradient(135deg,#6902f0dc,#500277);
+}
+#yellow{
+  background: linear-gradient(135deg,#fede12,#776702);
+}
+#green{
+  background: linear-gradient(135deg,#07f507,#027702);
+}
+#cyan{
+  background: linear-gradient(135deg,#00fbff,#07605e);
+}
+#pink{
+  background: linear-gradient(135deg,#ec06f9,#6d0277);
+}

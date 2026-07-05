@@ -1,0 +1,81 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* Full Screen Center */
+body {
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b);
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Main Container */
+.container {
+  width: 100%;
+  max-width: 420px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  padding: 2rem;
+  border-radius: 20px;
+  text-align: center;
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.3);
+}
+
+/* Heading */
+.container h1 {
+  color: #fff;
+  margin-bottom: 0.75rem;
+  font-size: 2rem;
+}
+
+/* Paragraph */
+.container p {
+  color: #cbd5e1;
+  margin-bottom: 1.5rem;
+  font-size: 0.95rem;
+}
+
+/* Input Field */
+.container input {
+  width: 100%;
+  padding: 12px 15px;
+  border: 2px solid transparent;
+  border-radius: 10px;
+  outline: none;
+  font-size: 1rem;
+  transition: all 0.3s ease;
+  margin-bottom: 1rem;
+}
+
+.container input:focus {
+  border-color: #646cff;
+  box-shadow: 0 0 12px rgba(100, 108, 255, 0.5);
+}
+
+/* Button */
+.container button {
+  width: 100%;
+  padding: 12px;
+  background: #646cff;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 1rem;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.container button:hover {
+  background: #535bf2;
+  transform: translateY(-2px);
+}
+
+.container button:active {
+  transform: translateY(0);
+}

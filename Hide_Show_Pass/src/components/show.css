@@ -1,0 +1,98 @@
+/* Reset */
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Background */
+#root{
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#root{
+    background: linear-gradient(
+        270deg,
+        #6366f1,
+        #8b5cf6,
+        #ec4899
+    );
+    background-size: 600% 600%;
+    animation: gradientMove 10s ease infinite;
+}
+
+@keyframes gradientMove{
+    0%{ background-position: 0% 50%; }
+    50%{ background-position: 100% 50%; }
+    100%{ background-position: 0% 50%; }
+}
+
+
+/* Card */
+.container{
+    width: min(380px, 90%);
+    padding: 28px 24px;
+    display: flex;
+    flex-direction: column;
+    gap: 18px;
+    position: relative;
+    background: #ffffff1f;
+    backdrop-filter: blur(12px);
+    border-radius: 16px;
+    border: 1px solid rgba(255, 255, 255, 0.25);
+    box-shadow: 0 20px 40px #00000040;
+}
+
+/* Heading */
+h1{
+    font-size: 32px;
+    text-align: center;
+    color: #ffffff;
+    letter-spacing: 1px;
+}
+
+/* Input */
+input{
+    width: 100%;
+    height: 52px;
+    padding: 0 48px 0 16px;
+    border: none;
+    outline: none;
+    font-size: 16px;
+
+    border-radius: 10px;
+    background: rgba(255, 255, 255, 0.9);
+    color: #333;
+
+    transition: box-shadow 0.3s ease, transform 0.2s ease;
+}
+
+input::placeholder{
+    color: #888;
+}
+
+input:focus{
+    box-shadow: 0 0 0 3px rgba(147, 51, 234, 0.4);
+    transform: scale(1.01);
+}
+
+/* Eye icon / toggle */
+p{
+    position: absolute;
+    right: 25px;
+    top: 64%;
+    transform: translateY(-50%);
+    font-size: 22px;
+    cursor: pointer;
+    color: #555;
+    transition: color 0.3s ease, transform 0.2s ease;
+}
+
+p:hover{
+    color: #7c3aed;
+    transform: translateY(-50%) scale(1.1);
+}

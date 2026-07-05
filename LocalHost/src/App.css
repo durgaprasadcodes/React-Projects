@@ -1,0 +1,195 @@
+/* ===== Global Styles ===== */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+    --bg: #0a0a0a;
+    --card: #111111;
+    --card-hover: #181818;
+    --text: #ffffff;
+    --text-secondary: #a1a1aa;
+    --border: #27272a;
+    --accent: #ffffff;
+}
+
+body {
+    min-height: 100vh;
+    background: linear-gradient(135deg,
+            #000000,
+            #0f0f0f,
+            #000000);
+    color: var(--text);
+    font-family: Inter, system-ui, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem;
+}
+
+/* ===== Main Container ===== */
+.container {
+    width: 100%;
+    max-width: 700px;
+    background: rgba(17, 17, 17, 0.95);
+    border: 1px solid var(--border);
+    border-radius: 24px;
+    padding: 2rem;
+    backdrop-filter: blur(12px);
+    box-shadow:
+        0 0 0 1px rgba(255, 255, 255, 0.05),
+        0 20px 40px rgba(0, 0, 0, 0.5);
+}
+
+/* ===== Heading ===== */
+.container h1 {
+    text-align: center;
+    font-size: 2.3rem;
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.container h1 span {
+    color: #fff;
+}
+
+/* ===== Input Section ===== */
+.container>label {
+    display: block;
+    margin-bottom: 0.6rem;
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+}
+
+.container input[type="text"] {
+    width: 100%;
+    padding: 14px 16px;
+    background: #0b0b0b;
+    color: white;
+    border: 1px solid var(--border);
+    border-radius: 12px;
+    outline: none;
+    font-size: 1rem;
+    transition: 0.3s ease;
+    margin-bottom: 2rem;
+}
+
+.container input[type="text"]:focus {
+    border-color: white;
+    box-shadow: 0 0 0 3px rgba(255, 255, 255, 0.08);
+}
+
+.container input[type="text"]::placeholder {
+    color: #666;
+}
+
+/* ===== Tasks Section ===== */
+.tasks h2 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+    border-bottom: 1px solid var(--border);
+    padding-bottom: 0.8rem;
+}
+
+.tasks ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    gap: 0.9rem;
+}
+
+/* ===== Task Card ===== */
+.tasks li {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    background: var(--card);
+    border: 1px solid var(--border);
+    border-radius: 14px;
+    padding: 14px 16px;
+    transition: all 0.3s ease;
+}
+
+.tasks li:hover {
+    transform: translateY(-3px);
+    background: var(--card-hover);
+    border-color: #555;
+}
+
+/* ===== Custom Checkbox ===== */
+.tasks input[type="checkbox"] {
+    appearance: none;
+    width: 22px;
+    height: 22px;
+    border: 2px solid #555;
+    border-radius: 6px;
+    cursor: pointer;
+    position: relative;
+    transition: all 0.25s ease;
+}
+
+.tasks input[type="checkbox"]:checked {
+    background: white;
+    border-color: white;
+}
+
+.tasks input[type="checkbox"]:checked::after {
+    content: "✓";
+    position: absolute;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -55%);
+}
+
+/* ===== Task Label ===== */
+.tasks label {
+    flex: 1;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: 0.3s ease;
+}
+
+/* Completed Task Effect */
+.tasks input[type="checkbox"]:checked+label {
+    text-decoration: line-through;
+    color: #777;
+}
+
+/* ===== Scrollbar ===== */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #0a0a0a;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #333;
+    border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
+
+/* ===== Responsive ===== */
+@media (max-width: 768px) {
+    .container {
+        padding: 1.5rem;
+    }
+
+    .container h1 {
+        font-size: 1.8rem;
+    }
+
+    .tasks li {
+        padding: 12px;
+    }
+}
