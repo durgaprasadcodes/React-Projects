@@ -1,0 +1,29 @@
+.Pagination {
+    font-family: Arial, sans-serif;
+    width: 600px;
+    margin: 40px auto;
+    text-align: center;
+}
+
+.task {
+    padding: 5px;
+    margin: 5px 0;
+    border: 1px solid #ddd;
+    border-radius: 6px;
+}
+
+.pagination-buttons {
+    margin-top: 20px;
+}
+
+.pagination-buttons button {
+    margin: 0 5px;
+    padding: 8px 14px;
+    cursor: pointer;
+}
+
+.pagination-buttons button.active {
+    background-color: #007bff;
+    color: white;
+    border: none;
+}
