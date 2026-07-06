@@ -1,0 +1,97 @@
+/* Google Font */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Poppins", sans-serif;
+  background: linear-gradient(135deg, #0f172a, #1e293b, #334155);
+  min-height: 100vh;
+}
+
+/* Main Container */
+.app {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 35px;
+  padding: 40px 20px;
+}
+
+/* PDF Preview Card */
+.preview {
+  width: 100%;
+  max-width: 950px;
+  padding: 20px;
+  background: rgba(255, 255, 255, 0.08);
+  backdrop-filter: blur(12px);
+  border-radius: 18px;
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  box-shadow:
+    0 20px 45px rgba(0, 0, 0, 0.35),
+    0 0 20px rgba(99, 102, 241, 0.2);
+}
+
+/* PDF Viewer */
+.preview iframe {
+  width: 100% !important;
+  height: 700px !important;
+  border: none;
+  border-radius: 12px;
+  background: white;
+}
+
+/* Download Button */
+.download-button {
+  border: none;
+  outline: none;
+  border-radius: 50px;
+  overflow: hidden;
+  transition: 0.3s;
+  box-shadow: 0 10px 25px rgba(79, 70, 229, 0.35);
+}
+
+.download-button:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 35px rgba(79, 70, 229, 0.45);
+}
+
+.download-button a {
+  display: inline-block;
+  padding: 16px 40px;
+  text-decoration: none;
+  color: white;
+  font-size: 17px;
+  font-weight: 600;
+  letter-spacing: 0.5px;
+  background: linear-gradient(135deg, #6366f1, #8b5cf6);
+  transition: 0.3s;
+}
+
+.download-button a:hover {
+  background: linear-gradient(135deg, #4f46e5, #7c3aed);
+}
+
+/* Mobile */
+@media (max-width: 768px) {
+  .preview {
+    padding: 12px;
+  }
+
+  .preview iframe {
+    height: 500px !important;
+  }
+
+  .download-button a {
+    width: 100%;
+    text-align: center;
+    padding: 14px 24px;
+    font-size: 16px;
+  }
+}
