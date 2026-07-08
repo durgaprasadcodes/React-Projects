@@ -1,0 +1,35 @@
+.react-memo {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 24px;
+  border-radius: 16px;
+  background: linear-gradient(135deg, #f8fafc, #e2e8f0);
+  box-shadow: 0 10px 30px rgba(15, 23, 42, 0.12);
+  font-family: Arial, sans-serif;
+  color: #0f172a;
+}
+
+.react-memo h1 {
+  margin-bottom: 8px;
+  color: #1d4ed8;
+}
+
+.react-memo h2,
+.react-memo h3 {
+  margin: 8px 0;
+}
+
+.react-memo button {
+  margin: 10px 10px 0 0;
+  padding: 10px 14px;
+  border: none;
+  border-radius: 8px;
+  background-color: #2563eb;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.2s ease;
+}
+
+.react-memo button:hover {
+  background-color: #1d4ed8;
+}
